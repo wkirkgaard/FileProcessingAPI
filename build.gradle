@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.challenge.fileprocessor'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Reactive Web
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.3.4'
+
+    // JPA + H2
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.3.4'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    runtimeOnly 'com.h2database:h2:2.3.232'
+
+    // MapStruct
+    implementation 'org.mapstruct:mapstruct:1.6.2'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.6.2'
+
+    // Guava
+    implementation 'com.google.guava:guava:33.2.0-jre'
+
+    // Retrofit (for a silly internal call)
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.11.0'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.challenge.fileprocessor.App'
+}

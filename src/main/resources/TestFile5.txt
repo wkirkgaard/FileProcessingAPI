@@ -1,0 +1,7 @@
+Symbols: !@#$%^&*()_+{}|:"<>?
+Accents: café naïve jalapeño
+Emoji: 🍺 🍻 😅
+Mixed languages:
+こんにちは
+Привет
+Hola

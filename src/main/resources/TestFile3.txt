@@ -1,0 +1,11 @@
+TODO:
+- fix the thing
+- rewrite the other thing
+- remember to buy coffee
+
+Random thoughts:
+Java is fun
+Reactive Java is... interesting
+Why is this file so chaotic?
+
+End of notes
